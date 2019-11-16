@@ -1,7 +1,11 @@
 module.exports = {
-  add,
+  add
 };
 
-function add() {
-  return null;
+function add(...restArgs) {
+  let total = 0;
+  for (let i = 0; i < restArgs.length; i++) {
+    total += restArgs[i];
+  }
+  return total;
 }
